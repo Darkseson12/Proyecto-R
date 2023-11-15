@@ -5,22 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="/Estyle/style1.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #FACC5F;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-container {
+            margin-top: 60px; /* Ajusta según el tamaño del header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-form label,
+        .login-form input,
+        .login-form button {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .login-form input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+
+        .logo {
+            padding-left: 50px;
+        }
+
+        .logo img {
+            max-width: 450px;
+        }
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Ajusta el margen según sea necesario */
+            cursor: pointer;
+        }
+
+        .menu-icon svg {
+            fill: #000000; /* Color del icono del menú */
+            transition: fill 0.3s ease; /* Agrega una transición de color al icono */
+        }
+
+        .menu-icon:hover svg {
+            fill: #FACC5F; /* Cambia el color del icono al pasar el mouse sobre él */
+        }
+    </style>
 </head>
-
-<header>
-    <p>fsf</p>
-</header>
-
 <body>
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form class="login-form">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="/Img/pymenfinder.png" alt="Logo de la empresa">
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </li>
+                <li><a href="/iniciosecion.html">Eres una empresa?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <div class="main-container">
+        <!-- Formulario -->
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form class="login-form">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
